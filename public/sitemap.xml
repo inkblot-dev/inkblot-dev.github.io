@@ -9,12 +9,12 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/showcase/exercises/deadcellswayfarer/</loc>
+    <loc>//localhost:1313/showcase/exercises/dead_cells_wayfarer/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/showcase/exercises/lolattackmove/</loc>
+    <loc>//localhost:1313/showcase/exercises/lol_attack_move/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -34,7 +34,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>//localhost:1313/showcase/projects/stardust/stardust/</loc>
+    <loc>//localhost:1313/showcase/projects/stardust/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

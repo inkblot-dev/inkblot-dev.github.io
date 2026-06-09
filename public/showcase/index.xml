@@ -53,12 +53,12 @@
     
     <item>
       <title>Stardust in Retrograde</title>
-      <link>//localhost:1313/showcase/projects/stardust/stardust/</link>
+      <link>//localhost:1313/showcase/projects/stardust/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>sgesling.dev@gmail.com (Sylvie Gesling)</author>
-      <guid>//localhost:1313/showcase/projects/stardust/stardust/</guid>
-      <description>Play as the twins Castor and Pollux as you return the stars to the night sky. Action-adventure made in UE5.</description>
-      
+      <guid>//localhost:1313/showcase/projects/stardust/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/showcase/projects/stardust/feature-hero.png" />
     </item>
     
   </channel>

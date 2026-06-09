@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Level-Design on Inkblot! Sylvie</title>
+    <link>//localhost:1313/tags/level-design/</link>
+    <description>Recent content in Level-Design on Inkblot! Sylvie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>sgesling.dev@gmail.com (Sylvie Gesling)</managingEditor>
+    <webMaster>sgesling.dev@gmail.com (Sylvie Gesling)</webMaster>
+    <copyright>Copyright @ 2026 | Sylvie Gesling</copyright>
+    <atom:link href="//localhost:1313/tags/level-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Stardust in Retrograde</title>
+      <link>//localhost:1313/showcase/projects/stardust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>sgesling.dev@gmail.com (Sylvie Gesling)</author>
+      <guid>//localhost:1313/showcase/projects/stardust/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/showcase/projects/stardust/feature-hero.png" />
+    </item>
+    
+  </channel>
+</rss>

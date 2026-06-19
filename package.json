@@ -2,7 +2,7 @@
   "name": "personalsite",
   "private": true,
   "scripts": {
-    "build:tailwind": "npx @tailwindcss/cli -c ./assets/css/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit",
-    "watch:tailwind": "npx @tailwindcss/cli -c ./assets/css/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit -w"
+    "build:tailwind": "npx @tailwindcss/cli -c ./themes/blowfish/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit",
+    "watch:tailwind": "npx @tailwindcss/cli -c ./themes/blowfish/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit -w"
   }
 }

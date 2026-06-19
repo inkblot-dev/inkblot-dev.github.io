@@ -120,8 +120,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.bcfa002e0ad76254a86fccccf2b9708219b31fbb508ea311440a6db82053b471b5291e96cc0e22620775987f67172ef6c0c0e2744a73d7f0f955fdc312824018.css"
-    integrity="sha512-vPoALgrXYlSob8zM8rlwghmzH7tQjqMRRAptuCBTtHG1KR6WzA4iYgd1mH9nFy72wMDidEpz1/D5Vf3DEoJAGA==">
+    href="/css/main.bundle.min.cad89b24d2badfc030bae3c20c1c2b76a208b617223af6cfbd3e31edf75321ff436f31b260a73f9e8fb2598acced4e1efd34b10ed7a6a335e23f4f7ef29fbc6c.css"
+    integrity="sha512-ytibJNK638AwuuPCDBwrdqIIthciOvbPvT4x7fdTIf9DbzGyYKc/no&#43;yWYrM7U4e/TSxDtemozXiP09&#43;8p&#43;8bA==">
 
   
   
@@ -814,14 +814,14 @@
         border-right: 1px solid black;
         padding-right: calc(var(--spacing) * 4);
     }
-    @media (width <= 40rem) {
-        .panel {
-            border-right: none;
-        }
-    } 
     .dark .panel {
         border-color: rgba(var(--color-primary-500), 1);
     }
+    @media (width <= 40rem) {
+        .panel {
+            border-right: 0px !important;
+        }
+    } 
 
     .info-node {
         backdrop-filter: blur(--var(--blur-md));
@@ -929,7 +929,7 @@
     </section>
 
     
-    <section class="flex flex-col mt-0 prose dark:prose-invert lg:flex-row">
+    <section class="flex flex-col mt-0 prose dark:prose-invert max-w-none lg:flex-row">
       
       
       
@@ -939,7 +939,7 @@
       <div class="min-w-0 min-h-0 max-w-fit-full">
         
 
-        <div class="article-content lg:max-w-lg mb-20">
+        <div class="article-content xl:max-w-xl mb-20">
           <p>I took on two roles on this project:</p>
 <ul>
 <li>UI designer</li>

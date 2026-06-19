@@ -3,14 +3,14 @@
         border-right: 1px solid black;
         padding-right: calc(var(--spacing) * 4);
     }
-    @media (width <= 40rem) {
-        .panel {
-            border-right: none;
-        }
-    } 
     .dark .panel {
         border-color: rgba(var(--color-primary-500), 1);
     }
+    @media (width <= 40rem) {
+        .panel {
+            border-right: 0px !important;
+        }
+    } 
 
     .info-node {
         backdrop-filter: blur(--var(--blur-md));

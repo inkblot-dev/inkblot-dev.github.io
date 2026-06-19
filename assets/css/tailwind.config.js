@@ -1,7 +1,19 @@
+const themeConfig = require('../../themes/blowfish/tailwind.config.js');
+
 module.exports = {
-  content: [
-    "./layouts/**/*.html",
-    "./content/**/*.md",
-    "./themes/blowfish/layouts/**/*.html"
-  ],
+  ...themeConfig,
+  theme: {
+    ...themeConfig.theme,
+    extend: {
+      ...(themeConfig.theme?.extend || {}),
+      typography: {
+        ...(themeConfig.theme?.extend?.typography || {}),
+        wide: {
+          css: {
+            maxWidth: '85ch'
+          }
+        }
+      }
+    }
+  }
 };

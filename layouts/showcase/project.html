@@ -35,7 +35,7 @@
     </section>
 
     {{/* Body */}}
-    <section class="flex flex-col mt-0 prose dark:prose-invert lg:flex-row">
+    <section class="flex flex-col mt-0 prose dark:prose-invert max-w-none lg:flex-row">
       {{ $enableToc := site.Params.article.showTableOfContents | default false }}
       {{ $enableToc = .Params.showTableOfContents | default $enableToc }}
       {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
@@ -50,7 +50,7 @@
 
       <div class="min-w-0 min-h-0 max-w-fit-full">
         {{ partial "series/series.html" . }}
-        <div class="article-content lg:max-w-lg mb-20">
+        <div class="article-content xl:max-w-xl mb-20">
           {{ .Content }}
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}

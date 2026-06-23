@@ -27,8 +27,9 @@ This project was highly influential in my growth as a designer. I came to the pr
 * when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
 * working on UI rocks; this was the first project I volunteered for UI work, and it was the first project I enjoyed working on it.
 
----
+{{< tabs default="Interface" >}}
 
+{{< tab label="Interface" md=true >}}
 ## Interface Design
 Deliverables:
 * Three wireframes.
@@ -69,9 +70,9 @@ Given more time, I would address the following:
 * adding dropshadow to text on translucent backgrounds.
 * advocating harder for allocating resources to the interface strike team, especially implementation.
 * adding a wireframe for how settings appear on the main menu.
+{{< /tab >}}
 
----
-
+{{< tab label="Level" md=true >}}
 ## Level Design
 Deliverables:
 * 3 brand new levels.
@@ -137,3 +138,8 @@ That said, I definitely have my critiques of how the levels turned out. The team
 
 > [!WARNING]
 > Insert gallery!
+{{< /tab >}}
+
+{{< /tabs >}}
+
+{{< tab-param >}}

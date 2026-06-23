@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ .Scratch.Set "scope" "single" }}
   <article>
-    {{/* Hero */}}
+    <!-- #region Hero -->
     {{ if .Params.showHero | default (site.Params.article.showHero | default false) }}
       {{ $heroStyle := .Params.heroStyle }}
       {{ if not $heroStyle }}{{ $heroStyle = site.Params.article.heroStyle }}{{ end }}
@@ -12,8 +12,9 @@
         {{ partial "hero/basic.html" . }}
       {{ end }}
     {{ end }}
+    <!-- #endregion -->
 
-    {{/* Header */}}
+    <!-- #region Header -->
     <header id="single_header" class="mt-5 max-w-fill">
       {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
         {{ partial "breadcrumbs.html" . }}
@@ -28,26 +29,33 @@
         {{ template "SingleAuthor" . }}
       {{ end }}
     </header>
+    <!-- #endregion-->
 
-    {{/* Side panel */}}
-    <section class="md:float-left md:w-80 md:mr-8">
-      {{ partial "project-info.html" . }}
+    <!-- #region Side Panel -->
+    <section class="lg:float-left lg:max-w-xs lg:mr-8">
+      {{ partial "showcase-panel.html" . }}
+
+      <!-- #region Table of Contents -->
+      <div class="prose dark:prose-invert max-w-none print:hidden">
+        {{ $enableToc := site.Params.article.showTableOfContents | default false }}
+        {{ $enableToc = .Params.showTableOfContents | default $enableToc }}
+        {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
+        {{ $topClass := cond (hasPrefix site.Params.header.layout "fixed") "lg:top-[140px]" "lg:top-10" }}
+        {{ if $showToc }}
+          <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+            <div class="toc ps-5 print:hidden {{ $topClass }}">
+              {{ partial "toc.html" . }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <!-- #endregion -->
     </section>
+    <!-- #endregion -->
 
     {{/* Body */}}
     <section class="flex flex-col mt-0 prose dark:prose-invert max-w-none lg:flex-row">
-      {{ $enableToc := site.Params.article.showTableOfContents | default false }}
-      {{ $enableToc = .Params.showTableOfContents | default $enableToc }}
-      {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
-      {{ $topClass := cond (hasPrefix site.Params.header.layout "fixed") "lg:top-[140px]" "lg:top-10" }}
-      {{ if $showToc }}
-        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
-          <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
-            {{ partial "toc.html" . }}
-          </div>
-        </div>
-      {{ end }}
-
+      <!-- #region Article Content -->
       <div class="min-w-0 min-h-0 max-w-fit-full">
         {{ partial "series/series.html" . }}
         <div class="article-content xl:max-w-xl mb-20">
@@ -79,9 +87,10 @@
         {{ partial "sharing-links.html" . }}
         {{ partial "related.html" . }}
       </div>
+      <!-- #endregion -->
     </section>
 
-    {{/* Footer */}}
+    <!-- #region Pagination and Comments -->
     <footer class="pt-8 max-w-prose print:hidden">
       {{ partial "article-pagination.html" . }}
       {{ if .Params.showComments | default (site.Params.article.showComments | default false) }}
@@ -97,6 +106,7 @@
         {{ end }}
       {{ end }}
     </footer>
+    <!-- #endregion-->
   </article>
 {{ end }}
 

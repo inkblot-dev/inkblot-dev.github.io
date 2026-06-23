@@ -2,7 +2,7 @@ disabled = false
 locale = "en"
 label = "English"
 weight = 1
-title = "Inkblot! Sylvie"
+title = "Sylvie Gesling | Inkblot Dev"
 
 [params]
   displayName = "EN"
@@ -19,7 +19,7 @@ title = "Inkblot! Sylvie"
    email = "sgesling.dev@gmail.com"
    image = "avatars/self-brownshirt.jpg"
    imageQuality = 96
-   headline = "Developer, designer, sociology nerd"
+   headline = "Designer, developer, and behavior nerd."
    bio = "A games and software designer, making things that feel just right."
    links = [
 { email = "mailto:sgesling.dev@gmail.com" },
@@ -35,7 +35,7 @@ title = "Inkblot! Sylvie"
 #     { facebook = "https://facebook.com/username" },
 #     { flickr = "https://www.flickr.com/photos/username/" },
 #     { foursquare = "https://foursquare.com/username" },
-{ github = "https://github.com/inkgesling" },
+{ github = "https://github.com/inkblot-dev" },
 #     { gitlab = "https://gitlab.com/username" },
 #     { google = "https://www.google.com/" },
 #     { hashnode = "https://username.hashnode.dev" },

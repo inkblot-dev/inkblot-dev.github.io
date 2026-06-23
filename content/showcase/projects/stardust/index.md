@@ -8,6 +8,7 @@ tags = ['project', 'unreal-5', 'ui-design', 'level-design', 'steam']
 showDate = false
 showReadingTime = false
 showWordCount = false
+showTableOfContents = false
 
 [Params]
 team = 'Stardust Sailors'
@@ -24,36 +25,115 @@ This project was highly influential in my growth as a designer. I came to the pr
 * to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
 * I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
 * when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.
+* working on UI rocks; this was the first project I volunteered for UI work, and it was the first project I enjoyed working on it.
 
 ---
 
-This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* contrary to what I'd thought, I *love* working with UI; realizing that reignited my passion to design.
+## Interface Design
+Deliverables:
+* Three wireframes.
+    * Main menu.
+    * In-game HUD.
+    * Pause menu.
+* Design POC on UI strike team.
+* Visual style guidelines for global HUD design.
+
+> [!abstract] Brief
+> **Starting point:** utilitarian menus, dense in-game HUD.  
+> **Objective:** update core menus and HUD, reinforce the engagement type of wonder.
+
+### In-game HUD
+Stardust is all about wonder and heroism — as such, my first priority was clear the screen as much as possible to soak in the environment. In practice, this takes two forms:
+* *Hideaway elements*: elements appear when necessary and disappear when not, saving screen real-estate for the environment.
+* *Reduced visual pull*: UI elements are simplified into geometric forms as to not ambiently draw the player's eye from the environment.
+The delivered wireframe was kitbashed in Krita using an in-game screenshot. I patched out the old UI and drew new elements in their place.
+
+> [!WARNING]
+> Insert wireframe image!
+
+### Menus
+I took the same principle of maximizing the environment's visibility in the menus as well.
+* *Translucent backgrounds*: low opacity backgrounds make the environment visible even in menus. If I were to do this again, I'd go a step further and add dropshadow to the text as to not compromise readability.
+* *Hugging the edges*: moving elements to the edge of the screen, rather than the center, leaves plenty of space to enjoy the environment. As a bonus, submenus could appear in the negative space without needing a whole modal!
+
+> [!WARNING]
+> Insert wireframe images!
+
+> [!WARNING]
+> Insert wireframe images!
+
+### Results
+The UI shipped on-time with the alpha build. Not everything got implemented; our interface strike team was stretched thin. Despite that, this was the first project I felt really proud of my interface work. The kitbashing strategy worked great, and it became a mainstay in my workflow moving forward.
+
+Given more time, I would address the following:
+* adding dropshadow to text on translucent backgrounds.
+* advocating harder for allocating resources to the interface strike team, especially implementation.
+* adding a wireframe for how settings appear on the main menu.
+
+---
+
+## Level Design
+Deliverables:
+* 3 brand new levels.
+* Paper maps for each.
+* Whiteboxes for each.
+* Leading the environment strike team.
+* New tutorial sequence.
+
+### Pre-production
+> [!abstract] Brief
+> **Starting point:** Temporary level, no intentions to ship.  
+> **Objective:** Three new levels, expand the environment kit, reinforce engagement through sweeping environments.
+
+{{< accordion mode="open" >}}
+    {{< accordionItem title="Must haves" md=true >}}
+    - *From a meeting with the CD*: individual biomes per level -- canyon, waterfall, pump, forge.
+    - *Hub space*: A central observatory structure to return to between levels.
+    - *Size*: Enemies kept getting smaller throughout production, so combat areas needed sized down.
+    - *From the systems designer*: Circular level design with lots of spiraling. Later scoped out of production but too late to make changes to the level.
+    - *To instill a sense of wonder* **(design pillar)**: large sweeping vistas and quiet downtime sections.
+    {{< /accordionItem >}}
+{{< /accordion >}}
+
+Following this, I got to work on drawing maps for each of the levels. Rough sketches of each map were created with paper and pencil, before being photographed and traced over in Krita for clarity and easy editing.
+
+> [!WARNING]
+> Insert gallery!
+
+### Whitebox phase
+I was responsible for nearly all of the in-engine whiteboxing of the levels, either independently or leading a strike time.
+* WB models were done in the UE5 modeling suite.
+* Each whitebox was built in a sub-level for easy loading/unloading and collaboration.
+* To leave time for set dressers, lighting artists, AI programmers, QA, and the audio team, all levels needed to be completed in a **6 week timeframe** (quite tight!).
+* We made the difficult decision to cut the third level at this phase, as we were already stretching team bandwidth.
+
+> [!tip] Big changes
+> While whiteboxing, some miscommunications occured that resulted in the levels being scaled too high! I spent a lot of time bringing everything back down to size, but ultimately the levels still have scale issues. Since then, I've been way more careful about how I document and communicate my levels and I always size conservatively.
+
+> [!WARNING]
+> Insert gallery!
+
+To help artists visualize the space, I took screenshots of the level into Krita. I would sketch over key corridors, as well as mark details with numbers. These numbers correlated to a second document with annotations. I found this approach to be effective in communicating to visually-minded coworkers.
+
+> [!WARNING]
+> Insert gallery!
+
+### Dressing phase
+After level lock, I switched focus. I took on leading the environment strike team, comprised of artists and programmers who would dress the whiteboxes using the environment kit. I also participated in the ground operations for this step, although I also devoted my attention to my duties on the UI team.
+* Having so many cooks in the kitchen posed serious concurrency issues! It became super important to communicate across departments about who was working on each level, and when they expected to commit it.
+
+> [!WARNING]
+> Insert gallery!
+
+### Results
+The levels shipped on-time with the first release candidate. My workflow had completely evolved during this process, and for that reason, I'm content with the project.
+
+That said, I definitely have my critiques of how the levels turned out. The team had planned for an extended four months of production, but that project fell through. The roadmap I had planned addressed the following:
+* adding a "quick return" to the hub between levels.
+* massively reducing the walking time between levels.
+* simple progression mechanisms unique to each level (unfreezing the waterfall, activating the star pump, etc.).
+* overhauling platforming sections to better utilize the dash and slowfall abilities.
+* mini-boss variants unique to each level and its theme.
+
+> [!WARNING]
+> Insert gallery!

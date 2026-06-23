@@ -1,0 +1,37 @@
+{{ $showcaseCSS := resources.Get "css/showcase-panel.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $showcaseCSS.RelPermalink }}">
+
+<div class="panel"> <!-- Panel -->
+    <div class="flex flex-col gap-2"> <!-- stack  -->
+        <div class="description-box"> <!-- description -->
+            <p>{{ .Params.description }}</p>
+        </div>
+        <div class="flex flex-col gap-2"> <!-- info nodes -->
+            <div class="detail-field">
+                <h1>Team</h1>
+                <p>{{ .Params.team }}</p>
+            </div>
+            <div class="detail-field">
+                <h1>Engine</h1>
+                <p>{{ .Params.engine }}</p>
+            </div>
+            <div class="detail-field">
+                <h1>Platforms</h1>
+                <p>{{ .Params.platforms }}</p>
+            </div>
+            <div class="detail-field">
+                <h1>Term</h1>
+                <p>{{ .Params.term }}</p>
+            </div>
+            <div class="detail-field">
+                <h1>Role</h1>
+                <p>{{ .Params.role }}</p>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-1 justify-center"> <!-- tags -->
+            {{ range .Params.tags }}
+            <span class="tag-item">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+</div>

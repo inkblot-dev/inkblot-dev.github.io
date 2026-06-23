@@ -1,0 +1,74 @@
+/* Styles for the project showcase partial. */
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The full panel. */ 
+.dark .panel {
+    border-color: rgba(var(--color-primary-500), 1);
+}
+
+/* The smaller boxes used for specific details. */
+.detail-field {
+    backdrop-filter: blur(--var(--blur-md));
+    background-color: rgba(var(--color-neutral-50), .5);
+    border: 1px solid rgba(var(--color-neutral-200), 1);
+    border-radius: var(--radius-sm);
+    padding: calc(var(--spacing) * 2);
+    text-align: center;
+}
+.dark .detail-field {
+    border: 1px solid rgba(var(--color-neutral-900), 1);
+    background-color: rgba(0, 0, 0, .3);
+}
+.detail-field h1, .detail-field p { 	
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height); 
+}
+.detail-field h1 {
+    color: rgba(var(--color-primary-700), 1);
+    font-weight: 600;
+}
+.dark .detail-field h1 {
+    color: rgba(var(--color-primary-400), 1);
+}
+.detail-field p {
+    color: rgba(var(--color-neutral-600), 1);
+}
+.dark .detail-field p {
+    color: rgba(var(--color-neutral-300), 1);
+}
+
+/* The little tags at the bottom of the panel. */
+.tag-item {
+    color: rgba(var(--color-secondary-600), 1);
+    background-color: rgba(var(--color-secondary-50), 1);
+    outline: 1px solid rgba(var(--color-secondary-600), 1);
+    padding: calc(var(--spacing) * 0) calc(var(--spacing) * 3);
+    font-size: var(--text-xs);
+    border-radius: 9999px;
+}
+.dark .tag-item {
+    color: rgba(var(--color-secondary-700), 1);
+    background-color: rgba(var(--color-secondary-50), 1);
+    outline-color: rgba(var(--color-secondary-700), 1);
+}
+
+/* The description of the project included in the panel. */
+.description-box {
+    background-color: rgba(var(--color-primary-100), .8);
+    backdrop-filter: blur(--var(--blur-xs));
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(var(--color-primary-300), 1);
+    padding: calc(var(--spacing) * 4);
+    font-size: var(--text-sm);
+    text-align: center;		
+    line-height: 1.3;
+    color: rgba(var(--color-primary-700), 1);
+}
+.dark .description-box {
+    background-color: rgba(var(--color-primary-100), .9);
+    border: 1px solid rgba(var(--color-primary-600), 1);
+}

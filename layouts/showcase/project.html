@@ -58,7 +58,7 @@
       <!-- #region Article Content -->
       <div class="min-w-0 min-h-0 max-w-fit-full">
         {{ partial "series/series.html" . }}
-        <div class="article-content xl:max-w-xl mb-20">
+        <div class="article-content xl:max-w-2xl mb-20">
           {{ .Content }}
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}

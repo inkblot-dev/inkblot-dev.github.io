@@ -15,17 +15,17 @@ team = 'Stardust Sailors'
 engine = 'Unreal Engine 5'
 platforms = 'Steam'
 term = '4 months'
-role = 'UX Designer, Level Designer'
+role = 'UI/UX Designer, Level Designer'
 +++
 I took on two roles on this project:
 * UI designer
 * level designer
 
 This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
-* to generate early design docs, directly drawing or kitbashing my mockups was more effective than jumping straight to Figma, Axure, or UMG.
-* I don't need to "see" the product in my head to have a vision; annotated images, written notes, and explanations can carry the brunt of the communication instead of trying to make "traditional" documentation like maps or reference sheets.
-* when the project needs more than I have the bandwidth to give, I need to communicate that to the team; it helps nobody for me to be always working on the back foot.
-* working on UI rocks; this was the first project I volunteered for UI work, and it was the first project I enjoyed working on it.
+* To generate early design docs, directly drawing or kitbashing my mockups is often more effective than jumping straight to Figma, Axure, or UMG.
+* Documentation just needs to be functional and easy to use. I used to be convinced that there is a "right way" to create documentation, and that my non-visual way of thinking couldn't translate into useful maps or wireframes. It was beneficial to lean harder on annotations, written reasoning, and data when making deliverables.
+* When I don't have the bandwidth to hit a deadline, I have to be honest and proactive about it.
+* This was the first project that I found my stride with UI. This would go on to motivate big career shift into UI design down the road.
 
 {{< tabs default="Interface" >}}
 
@@ -47,21 +47,31 @@ Deliverables:
 Stardust is all about wonder and heroism — as such, my first priority was clear the screen as much as possible to soak in the environment. In practice, this takes two forms:
 * *Hideaway elements*: elements appear when necessary and disappear when not, saving screen real-estate for the environment.
 * *Reduced visual pull*: UI elements are simplified into geometric forms as to not ambiently draw the player's eye from the environment.
+
 The delivered wireframe was kitbashed in Krita using an in-game screenshot. I patched out the old UI and drew new elements in their place.
 
-> [!WARNING]
-> Insert wireframe image!
+{{<figure
+    src="images/hud-wireframe.png"
+    alt="Wireframe of a game's H.U.D."
+    caption="The final draft wireframe of the HUD rework — kitbashed in Krita."
+>}}
 
 ### Menus
 I took the same principle of maximizing the environment's visibility in the menus as well.
 * *Translucent backgrounds*: low opacity backgrounds make the environment visible even in menus. If I were to do this again, I'd go a step further and add dropshadow to the text as to not compromise readability.
 * *Hugging the edges*: moving elements to the edge of the screen, rather than the center, leaves plenty of space to enjoy the environment. As a bonus, submenus could appear in the negative space without needing a whole modal!
 
-> [!WARNING]
-> Insert wireframe images!
+{{<figure
+    src="images/mm-wireframe.png"
+    alt="Wireframe of a game's main menu."
+    caption="A wireframe of the proposed main menu — kitbashed and sketched over in Krita. I focused on conveying the type of composition that would serve this design."
+>}}
 
-> [!WARNING]
-> Insert wireframe images!
+{{<figure
+    src="images/pm-wireframe.png"
+    alt="Wireframe of a game's pause menu."
+    caption="A wireframe of the proposed pause menu — kitbashed and sketched over in Krita. I focused on communicating how the menu and sub-menu should be placed in relation to each other."
+>}}
 
 ### Results
 The UI shipped on-time with the alpha build. Not everything got implemented; our interface strike team was stretched thin. Despite that, this was the first project I felt really proud of my interface work. The kitbashing strategy worked great, and it became a mainstay in my workflow moving forward.
@@ -87,19 +97,22 @@ Deliverables:
 > **Objective:** Three new levels, expand the environment kit, reinforce engagement through sweeping environments.
 
 {{< accordion mode="open" >}}
-    {{< accordionItem title="Must haves" md=true >}}
-    - *From a meeting with the CD*: individual biomes per level -- canyon, waterfall, pump, forge.
-    - *Hub space*: A central observatory structure to return to between levels.
-    - *Size*: Enemies kept getting smaller throughout production, so combat areas needed sized down.
-    - *From the systems designer*: Circular level design with lots of spiraling. Later scoped out of production but too late to make changes to the level.
-    - *To instill a sense of wonder* **(design pillar)**: large sweeping vistas and quiet downtime sections.
-    {{< /accordionItem >}}
+{{< accordionItem title="Must haves" >}}
+- *From a meeting with the CD*: individual biomes per level -- canyon, waterfall, pump, forge.
+- *Hub space*: A central observatory structure to return to between levels.
+- *Size*: Enemies kept getting smaller throughout production, so combat areas needed sized down.
+- *From the systems designer*: Circular level design with lots of spiraling. Later scoped out of production but too late to make changes to the level.
+- *To instill a sense of wonder* **(design pillar)**: large sweeping vistas and quiet downtime sections.
+{{< /accordionItem >}}
 {{< /accordion >}}
 
 Following this, I got to work on drawing maps for each of the levels. Rough sketches of each map were created with paper and pencil, before being photographed and traced over in Krita for clarity and easy editing.
 
-> [!WARNING]
-> Insert gallery!
+{{< gallery >}}
+{{< figure src="images/pmap-water.png" alt="Paper map of the water level" figureClass="grid-w33" >}}
+{{< figure src="images/pmap-earth.png" alt="Paper map of the earth level" figureClass="grid-w33" >}}
+{{< figure src="images/pmap-fire.png" alt="Paper map of the fire level" figureClass="grid-w33" >}}
+{{< /gallery >}}
 
 ### Whitebox phase
 I was responsible for nearly all of the in-engine whiteboxing of the levels, either independently or leading a strike time.

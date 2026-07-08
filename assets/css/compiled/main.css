@@ -1,4 +1,4 @@
-/*! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.2 | MIT License | https://tailwindcss.com */
 /*! Blowfish | MIT License | https://github.com/nunocoracao/blowfish */
 @layer properties;
 @layer theme, base, components, utilities;
@@ -14,6 +14,7 @@
     --container-md: 28rem;
     --container-lg: 32rem;
     --container-xl: 36rem;
+    --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-7xl: 80rem;
     --text-xs: 0.75rem;
@@ -213,6 +214,9 @@
   }
 }
 @layer utilities {
+  .\@container {
+    container-type: inline-size;
+  }
   .pointer-events-auto {
     pointer-events: auto;
   }
@@ -1017,29 +1021,6 @@
   }
   .box-content {
     box-sizing: content-box;
-  }
-  .scrollbar {
-    &::-webkit-scrollbar-track {
-      background-color: var(--scrollbar-track);
-      border-radius: var(--scrollbar-track-radius);
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--scrollbar-thumb);
-      border-radius: var(--scrollbar-thumb-radius);
-    }
-    &::-webkit-scrollbar-corner {
-      background-color: var(--scrollbar-corner);
-      border-radius: var(--scrollbar-corner-radius);
-    }
-    @supports (-moz-appearance:none) {
-      scrollbar-width: auto;
-      scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
-    }
-    &::-webkit-scrollbar {
-      display: block;
-      width: var(--scrollbar-width, 16px);
-      height: var(--scrollbar-height, 16px);
-    }
   }
   .line-clamp-3 {
     overflow: hidden;
@@ -2240,6 +2221,9 @@
   .italic {
     font-style: italic;
   }
+  .italic\! {
+    font-style: italic !important;
+  }
   .not-italic {
     font-style: normal;
   }
@@ -3164,11 +3148,6 @@
       width: calc(1 / 4 * 100%);
     }
   }
-  .lg\:w-80 {
-    @media (width >= 1024px) {
-      width: calc(var(--spacing) * 80);
-    }
-  }
   .lg\:w-auto {
     @media (width >= 1024px) {
       width: auto;
@@ -3259,9 +3238,9 @@
       width: calc(1 / 4 * 100%);
     }
   }
-  .xl\:max-w-xl {
+  .xl\:max-w-2xl {
     @media (width >= 1280px) {
-      max-width: var(--container-xl);
+      max-width: var(--container-2xl);
     }
   }
   .xl\:grid-cols-4 {
@@ -4884,25 +4863,21 @@ pre {
       width: 8px;
       height: 8px;
     }
-    scrollbar-width: thin;
-    --tw-scrollbar-thumb: rgba(var(--color-neutral-400), 1);
-    --tw-scrollbar-track: rgba(var(--color-neutral-200), 1);
-    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
     --scrollbar-thumb: oklch(70.8% 0 0);
     --scrollbar-track: oklch(92.2% 0 0);
-    &:is(.dark *) {
-      --tw-scrollbar-thumb: rgba(var(--color-neutral-600), 1);
-      scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
-    }
-    &:is(.dark *) {
-      --tw-scrollbar-track: rgba(var(--color-neutral-800), 1);
-      scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
-    }
     &:is(.dark *) {
       --scrollbar-thumb: oklch(43.9% 0 0);
     }
     &:is(.dark *) {
       --scrollbar-track: oklch(26.9% 0 0);
+    }
+  }
+}
+@layer base {
+  * {
+    @supports (-moz-appearance:none) {
+      scrollbar-color: initial;
+      scrollbar-width: initial;
     }
   }
 }
@@ -5084,14 +5059,6 @@ body:has(#mobile-menu-toggle:checked) {
   input:where([type='file']):focus {
     outline: 1px solid ButtonText;
     outline: 1px auto -webkit-focus-ring-color;
-  }
-}
-@layer base {
-  * {
-    @supports (-moz-appearance:none) {
-      scrollbar-color: initial;
-      scrollbar-width: initial;
-    }
   }
 }
 @property --tw-translate-x {
@@ -5417,16 +5384,6 @@ body:has(#mobile-menu-toggle:checked) {
   initial-value: "";
   inherits: false;
 }
-@property --tw-scrollbar-thumb {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
-@property --tw-scrollbar-track {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0000;
-}
 @keyframes pulse {
   50% {
     opacity: 0.5;
@@ -5509,8 +5466,6 @@ body:has(#mobile-menu-toggle:checked) {
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-content: "";
-      --tw-scrollbar-thumb: #0000;
-      --tw-scrollbar-track: #0000;
     }
   }
 }

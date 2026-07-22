@@ -24,9 +24,9 @@ Deliverables:
 Following this, I got to work on drawing maps for each of the levels. Rough sketches of each map were created with paper and pencil, before being photographed and traced over in Krita for clarity and easy editing.
 
 {{< gallery >}}
-<img src="images/pmap-water.png" alt="Paper map of the water level" class="grid-w33">
-<img src="images/pmap-earth.png" alt="Paper map of the earth level" class="grid-w33">
-<img src="images/pmap-fire.png" alt="Paper map of the fire level" class="grid-w33">
+<img src="images/level/paper-water.png" alt="Paper map of the water level" class="grid-w33">
+<img src="images/level/paper-earth.png" alt="Paper map of the earth level" class="grid-w33">
+<img src="images/level/paper-fire.png" alt="Paper map of the fire level" class="grid-w33">
 {{< /gallery >}}
 
 ### Whitebox phase

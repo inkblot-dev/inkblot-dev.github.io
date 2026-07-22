@@ -19,7 +19,7 @@ Stardust is all about wonder and heroism — as such, my first priority was clea
 The delivered wireframe was kitbashed in Krita using an in-game screenshot. I patched out the old UI and drew new elements in their place.
 
 {{<figure
-    src="images/hud-wireframe.png"
+    src="images/ui/hud-wf.png"
     alt="Wireframe of a game's H.U.D."
     caption="The final draft wireframe of the HUD rework — kitbashed in Krita."
 >}}
@@ -30,13 +30,13 @@ I took the same principle of maximizing the environment's visibility in the menu
 * *Hugging the edges*: moving elements to the edge of the screen, rather than the center, leaves plenty of space to enjoy the environment. As a bonus, submenus could appear in the negative space without needing a whole modal!
 
 {{<figure
-    src="images/mm-wireframe.png"
+    src="images/ui/main-wf.png"
     alt="Wireframe of a game's main menu."
     caption="A wireframe of the proposed main menu — kitbashed and sketched over in Krita. I focused on conveying the type of composition that would serve this design."
 >}}
 
 {{<figure
-    src="images/pm-wireframe.png"
+    src="images/ui/pause-wf.png"
     alt="Wireframe of a game's pause menu."
     caption="A wireframe of the proposed pause menu — kitbashed and sketched over in Krita. I focused on communicating how the menu and sub-menu should be placed in relation to each other."
 >}}

@@ -1,0 +1,16 @@
+{{/* 
+  include.html
+  Usage: {{< include "path/to/file.md" >}}
+  - Path is relative to the Hugo project root.
+  - Supports Markdown rendering.
+  - Gracefully handles missing files.
+*/}}
+
+{{ $path := printf "%s%s" .Page.File.Dir (.Get 0) }}
+{{ if not $path }}
+  {{ errorf "include shortcode: no file path provided" }}
+{{ else if not (fileExists $path) }}
+  {{ errorf "include shortcode: file not found: %s" $path }}
+{{ else }}
+  {{ readFile $path | safeHTML }} 
+{{ end }}

@@ -39,20 +39,33 @@ I was responsible for nearly all of the in-engine whiteboxing of the levels, eit
 > [!tip] Big changes
 > While whiteboxing, some miscommunications occured that resulted in the levels being scaled too high! I spent a lot of time bringing everything back down to size, but ultimately the levels still have scale issues. Since then, I've been way more careful about how I document and communicate my levels and I always size conservatively.
 
-> [!WARNING]
-> Insert gallery!
+{{<figure
+    src="images/level/wb-water.png"
+    alt="Whitebox of the water-themed level."
+    caption="Whitebox of the water-themed level."
+>}}
+{{<figure
+    src="images/level/wb-earth.png"
+    alt="Whitebox of the earth-themed level."
+    caption="Whitebox of the earth-themed level."
+>}}
 
 To help artists visualize the space, I took screenshots of the level into Krita. I would sketch over key corridors, as well as mark details with numbers. These numbers correlated to a second document with annotations. I found this approach to be effective in communicating to visually-minded coworkers.
 
-> [!WARNING]
-> Insert gallery!
+{{<figure
+    src="images/level/anno-water-1.png"
+    alt="An annotated screencap."
+    caption=""
+>}}
+{{<figure
+    src="images/level/anno-water-2.png"
+    alt="An annotated screencap."
+    caption=""
+>}}
 
 ### Dressing phase
 After level lock, I switched focus. I took on leading the environment strike team, comprised of artists and programmers who would dress the whiteboxes using the environment kit. I also participated in the ground operations for this step, although I also devoted my attention to my duties on the UI team.
 * Having so many cooks in the kitchen posed serious concurrency issues! It became super important to communicate across departments about who was working on each level, and when they expected to commit it.
-
-> [!WARNING]
-> Insert gallery!
 
 ### Results
 The levels shipped on-time with the first release candidate. My workflow had completely evolved during this process, and for that reason, I'm content with the project.
@@ -64,5 +77,23 @@ That said, I definitely have my critiques of how the levels turned out. The team
 * overhauling platforming sections to better utilize the dash and slowfall abilities.
 * mini-boss variants unique to each level and its theme.
 
-> [!WARNING]
-> Insert gallery!
+{{<figure
+    src="images/level/final-intro.png"
+    alt="Final cap of the tutorial area."
+    caption="Final cap of the tutorial area."
+>}}
+{{<figure
+    src="images/level/final-hub.png"
+    alt="Final cap of the hub environ."
+    caption="Final cap of the hub environ."
+>}}
+{{<figure
+    src="images/level/final-water.png"
+    alt="Final cap of the water-themed level."
+    caption="Final cap of the water-themed level."
+>}}
+{{<figure
+    src="images/level/final-earth.png"
+    alt="Final cap of the earth-themed level."
+    caption="Final cap of the earth-themed level."
+>}}

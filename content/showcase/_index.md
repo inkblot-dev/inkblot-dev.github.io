@@ -11,5 +11,5 @@ category = "project"
 [[sections]]
 title = "Bites"
 description = "Work samples, demonstrating my approach as applied to existing or theoritical source materials."
-category = "exercise"
+category = "bite"
 +++

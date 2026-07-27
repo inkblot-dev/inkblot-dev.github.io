@@ -144,6 +144,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   cardView = false
   cardViewScreenWidth = false
 
+[params]
+  customCSS = ["css/custom.css"]
+
 [firebase]
   # apiKey = "XXXXXX"
   # authDomain = "XXXXXX"

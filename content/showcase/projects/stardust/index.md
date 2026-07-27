@@ -17,10 +17,6 @@ platforms = 'Steam'
 term = '4 months'
 role = 'UI/UX Designer, Level Designer'
 +++
-I took on two roles on this project:
-* UI designer
-* level designer
-
 This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
 * To generate early design docs, directly drawing or kitbashing my mockups is often more effective than jumping straight to Figma, Axure, or UMG.
 * Documentation just needs to be functional and easy to use. I used to be convinced that there is a "right way" to create documentation, and that my non-visual way of thinking couldn't translate into useful maps or wireframes. It was beneficial to lean harder on annotations, written reasoning, and data when making deliverables.

@@ -1,0 +1,30 @@
+/* Custom site utilities */
+
+@layer components {
+  .prose em {
+    color: rgb(var(--color-primary-700));
+  }
+  .dark .prose em {
+    color: rgb(var(--color-primary-300));
+  }
+}
+
+@layer utilities {
+  /* variables */
+  .prose {
+    --tw-prose-captions-light: rgba(var(--color-neutral-600), 1);
+    --tw-prose-captions-dark: rgba(var(--color-neutral-400), 1);
+  }
+
+  /* captions */
+  .prose {
+    & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-captions-light) !important;
+    }
+  }
+  .dark .prose {
+    & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: var(--tw-prose-captions-dark) !important;
+    }
+  }
+}

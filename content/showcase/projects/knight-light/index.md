@@ -17,3 +17,10 @@ platforms = 'Steam'
 term = '4 months'
 role = 'Design Producer, UI Designer, Level Designer'
 +++
+This project was a challenge, but we shipped nonetheless. I joined the project eight months into a twelve month production schedule; the entire design department had just quit, and the team was far off track to ship. I assumed the role of design producer with the goal of steering us back on track. The team was understaffed in multiple critical departments, so I took the following actions to alleviate the building stress:
+* *onboarding designers*: I brought on two additional junior designers, responsible for combat and levels respectively. That made four total designers to close out the project. Since they were juniors with mid-level responsibilities, we helped them learn how to write documentation, sync with other departments, and refine their work.
+* *auditing production progress*: When I lead, I like having a birds-eye view of the project. The first thing I did was play through the game, recording any feature or element that needed triage. I laid it all out in a document and coded it for each department. When I saw that the audit showed more problems than we had time to fix, we consulted with our shareholders to present the situation honestly.
+* *cross-discipline syncs*: While every designer should be connecting with other departments, as design producer, I needed to be involved in big-picture strategy decisions. If a feature was being axed, I needed to be the one to communicate that. If a task slipped through the cracks, I needed to find someone to pick it up. If we needed changes in vision, which we absolutely did on multiple occassions, I needed to co-decide what was feasable and what wasn't.
+* *sharing the burden*: At times, coworkers were buried in work. If I had the bandwidth, I'd do what I could to absorb some of their tasks and distribute the pressure. This included my department and other departments -- something I could only do because of my background in both technical and artistic game dev work.
+
+Ultimately, we shipped on time. It was not easy for our team, but I'm proud of our coworkers for pushing it over the finish line.

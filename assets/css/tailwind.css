@@ -1,5 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import "./extended.css";
+@import "../../themes/blowfish/assets/css/main.css";
+@import "./custom.css";

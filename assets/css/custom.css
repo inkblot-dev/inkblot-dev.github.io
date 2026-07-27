@@ -1,5 +1,11 @@
 /* Custom site utilities */
 
+/* Tailwind directives */
+@import "tailwindcss/index.css";
+@import "tailwindcss/preflight.css";
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
+
 @layer components {
   .prose em {
     color: rgb(var(--color-primary-700));
@@ -21,10 +27,27 @@
     & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
       color: var(--tw-prose-captions-light) !important;
     }
-  }
-  .dark .prose {
-    & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    .dark & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
       color: var(--tw-prose-captions-dark) !important;
     }
   }
+
+  /*
+  .prose {
+    container: prose-box / size;
+    /* breakout for figures */ /*
+    @container (min-width: 32rem) {
+      figure {
+        position: relative;
+
+        & img, & figcaption {
+          position: absolute;
+          right: 100%;
+          margin-right: 1rem;
+          width: var(--container-lg);
+          text-align: right;
+        }
+      }
+    }
+  } */
 }

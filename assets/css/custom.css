@@ -1,11 +1,5 @@
 /* Custom site utilities */
 
-/* Tailwind directives */
-@import "tailwindcss/index.css";
-@import "tailwindcss/preflight.css";
-@import "tailwindcss/theme.css";
-@import "tailwindcss/utilities.css";
-
 @layer components {
   .prose em {
     color: rgb(var(--color-primary-700));

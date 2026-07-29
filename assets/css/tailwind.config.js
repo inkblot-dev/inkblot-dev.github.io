@@ -1,13 +1,12 @@
 const themeConfig = require('../../themes/blowfish/tailwind.config.js');
+const path = require('path');
 
 module.exports = {
   ...themeConfig,
   content: [
     "./layouts/**/*.html",
     "./content/**/*.md",
-    "./themes/blowfish/layouts/**/*.html",
-    "./themes/blowfish/layouts/**/*.svg",
-    "./themes/blowfish/layouts/**/*.md",
-    "./themes/blowfish/layouts/shortcodes/**/*.html"
+    path.resolve(__dirname, '../../themes/blowfish/layouts/**/*.html'),
+    path.resolve(__dirname, '../../themes/blowfish/layouts/**/*.md'),
   ]
 };

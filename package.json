@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "server": "hugo server -b http://localhost -p 1313",
-    "build:tailwind": "npx @tailwindcss/cli -c ./assets/css/tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/compiled/main.css --jit",
-    "watch:tailwind": "npx @tailwindcss/cli -c ./assets/css/tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/compiled/main.css --jit -w"
+    "build:tailwind": "npx @tailwindcss/cli -c ./assets/css/tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/compiled/main.css",
+    "watch:tailwind": "npx @tailwindcss/cli -c ./assets/css/tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/compiled/main.css -w"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",

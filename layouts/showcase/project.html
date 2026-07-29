@@ -33,18 +33,18 @@
 
     <!-- #region Side Panel -->
     <section class="lg:float-left lg:max-w-xs lg:mr-8">
-      {{ partial "showcase-panel.html" . }}
+      {{ partial "show-panel.html" . }}
 
       <!-- #region Table of Contents -->
       <div class="prose dark:prose-invert max-w-none print:hidden">
         {{ $enableToc := site.Params.article.showTableOfContents | default false }}
         {{ $enableToc = .Params.showTableOfContents | default $enableToc }}
-        {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
+        {{ $showToc := and $enableToc (or (in .TableOfContents "<ul") .Params.toc) }}
         {{ $topClass := cond (hasPrefix site.Params.header.layout "fixed") "lg:top-[140px]" "lg:top-10" }}
         {{ if $showToc }}
-          <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
-            <div class="toc ps-5 print:hidden {{ $topClass }}">
-              {{ partial "toc.html" . }}
+          <div class="order-first lg:ms-auto px-0 lg:order-last lg:max-w-2xs">
+            <div class="toc print:hidden {{ $topClass }}">
+              {{ partial "showcase/toc.html" . }}
             </div>
           </div>
         {{ end }}

@@ -8,7 +8,7 @@ tags = ['project', 'unreal-5', 'ui-design', 'level-design', 'steam']
 showDate = false
 showReadingTime = false
 showWordCount = false
-showTableOfContents = false
+showTableOfContents = true
 
 [Params]
 team = 'Stardust Sailors'
@@ -16,6 +16,54 @@ engine = 'Unreal Engine 5'
 platforms = 'Steam'
 term = '4 months'
 role = 'UI/UX Designer, Level Designer'
+
+[[Params.toc]]
+anchor = "interface-design"
+level = 2
+title = "Interface Design"
+tab = "Interface"
+
+[[Params.toc]]
+anchor = "in-game-hud"
+level = 3
+title = "In-game HUD"
+tab = "Interface"
+
+[[Params.toc]]
+anchor = "menus"
+level = 3
+title = "Menus"
+tab = "Interface"
+
+[[Params.toc]]
+anchor = "results"
+level = 3
+title = "Results"
+tab = "Interface"
+
+[[Params.toc]]
+anchor = "level-design"
+level = 2
+title = "Level Design"
+tab = "Level"
+
+[[Params.toc]]
+anchor = "pre-production"
+level = 3
+title = "Pre-production"
+tab = "Level"
+
+[[Params.toc]]
+anchor = "whitebox-phase"
+level = 3
+title = "Whitebox phase"
+tab = "Level"
+
+[[Params.toc]]
+anchor = "dressing-phase"
+level = 3
+title = "Dressing phase"
+tab = "Level"
 +++
 This project was highly influential in my growth as a designer. I came to the project after a streak of discouraging projects; I was burnt out. Four months into production, the game was in need of urgent content updates. That forced me to reflect on my workflow, determine what was working and what wasn't. My conclusions:
 * To generate early design docs, directly drawing or kitbashing my mockups is often more effective than jumping straight to Figma, Axure, or UMG.

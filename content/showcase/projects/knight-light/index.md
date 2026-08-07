@@ -24,3 +24,17 @@ This project was a challenge, but we shipped nonetheless. I joined the project e
 * *sharing the burden*: At times, coworkers were buried in work. If I had the bandwidth, I'd do what I could to absorb some of their tasks and distribute the pressure. This included my department and other departments -- something I could only do because of my background in both technical and artistic game dev work.
 
 Ultimately, we shipped on time. It was not easy for our team, but I'm proud of our coworkers for pushing it over the finish line.
+
+{{< tabs default="Interface" >}}
+
+{{< tab label="Interface" md=true >}}
+{{< include "interface.md" >}}
+{{< /tab >}}
+
+{{< tab label="Level" md=true >}}
+{{< include "level.md" >}}
+{{< /tab >}}
+
+{{< /tabs >}}
+
+{{< tab-param >}}

@@ -4,7 +4,7 @@ category = 'project'
 description = 'As nightmares manifest lay siege to a sleeping city, their fierce protector — the Knight Light — awakens to protect them. Action-adventure made in UE5.'
 type = 'showcase'
 layout = 'project'
-tags = ['project', 'unreal-5', 'ui-design', 'level-design', 'steam']
+tags = ['project', 'unreal-5', 'ui-design', 'level-design', 'steam', 'pc-release']
 showDate = false
 showReadingTime = false
 showWordCount = false
@@ -23,12 +23,16 @@ This project was a challenge, but we shipped nonetheless. I joined the project e
 * *cross-discipline syncs*: While every designer should be connecting with other departments, as design producer, I needed to be involved in big-picture strategy decisions. If a feature was being axed, I needed to be the one to communicate that. If a task slipped through the cracks, I needed to find someone to pick it up. If we needed changes in vision, which we absolutely did on multiple occassions, I needed to co-decide what was feasable and what wasn't.
 * *sharing the burden*: At times, coworkers were buried in work. If I had the bandwidth, I'd do what I could to absorb some of their tasks and distribute the pressure. This included my department and other departments -- something I could only do because of my background in both technical and artistic game dev work.
 
-Ultimately, we shipped on time. It was not easy for our team, but I'm proud of our coworkers for pushing it over the finish line.
+Ultimately, we shipped on time. It was not easy for our team, but I'm proud of our coworkers for pushing it over the finish line. While not all of my work was able to be implemented in the final product due to our strict production timeline, I'm happy with the work I delivered to my team.
 
 {{< tabs default="Interface" >}}
 
 {{< tab label="Interface" md=true >}}
 {{< include "interface.md" >}}
+{{< /tab >}}
+
+{{< tab label="Mechanics" md=true >}}
+{{< include "systems.md" >}}
 {{< /tab >}}
 
 {{< tab label="Level" md=true >}}

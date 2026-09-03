@@ -23,11 +23,11 @@ Deliverables:
 
 Following this, I got to work on drawing maps for each of the levels. Rough sketches of each map were created with paper and pencil, before being photographed and traced over in Krita for clarity and easy editing.
 
-{{< gallery >}}
-![Paper map of the water level](images/level/paper-water.png) | grid-w33
-![Paper map of the earth level](images/level/paper-earth.png) | grid-w33
-![Paper map of the fire level](images/level/paper-fire.png) | grid-w33
-{{< /gallery >}}
+{{< multifig caption="Paper maps of the three non-tutorial levels." >}}
+![Paper map of the water level](images/level/paper-water.png)
+![Paper map of the earth level](images/level/paper-earth.png)
+![Paper map of the fire level](images/level/paper-fire.png)
+{{< /multifig >}}
 
 ### Whitebox phase
 I was responsible for nearly all of the in-engine whiteboxing of the levels, either independently or leading a strike time.

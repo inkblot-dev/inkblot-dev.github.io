@@ -1,0 +1,64 @@
+{{/* Multi-image figure shortcode for rendering images in a flexbox */}}
+{{/* syntax: {{< multifig caption="Your caption here" >}} ![alt text](image-url) {{< /multifig >}} */}}
+
+{{ $page := .Page }}
+{{ $caption := .Get "caption" -}}
+{{ $inner := .Inner -}}
+
+{{ $rendered := "" }}
+{{ range split (trim $inner "\n") "\n" }}
+  {{ $line := . }}
+  {{/* PROCESS EACH LINE */}}
+  
+  {{ $alt := "" }}
+  {{ $altRegexMatch := findRE `!\[([^\]]*)\]` $line }}
+  {{ if $altRegexMatch }}
+    {{ $alt = index $altRegexMatch 0 | replaceRE `!\[(.*)\]` "$1" }}
+  {{ end }}
+  {{if not $alt }}
+    {{ continue }}
+  {{ end }}
+
+  {{ $url := "" }}
+  {{ $urlRegexMatch := findRE `\(([^)"]+)` $line }} {{/* intellisense cant highlight this proper unless i escape that "*/}}
+  {{ if $urlRegexMatch }}
+    {{ $url = index $urlRegexMatch 0 | replaceRE `\((.*)` "$1" }}
+  {{ end }}
+  {{if not $url }}
+    {{ continue }}
+  {{ end }}
+
+  {{ $imgCols := 1 }}
+  {{ $imgRows := 1 }}
+  {{/* if the url works, pull the image from it. figure out its aspect ratio.*/}}
+  {{if $url }}
+    {{ $img := $page.Resources.GetMatch $url }}
+
+    {{ $imgW := $img.Width }}
+    {{ $imgH := $img.Height }}
+    {{ $imgRatio := div $imgH $imgW }}
+
+    {{/* is this image horizontal or vertical? test by comparing $imgRatio to 1 */}}
+    {{ if lt $imgRatio 1 }}
+      {{/* horizontal image */}}
+      {{ $imgCols = 1 }}
+      {{ $imgRows = 2 }}
+    {{ else if gt $imgRatio 1 }}
+      {{/* vertical image */}}
+      {{ $imgCols = 2 }}
+      {{ $imgRows = 1 }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Output each line. */}}
+  {{ $rendered = printf "%s<img src=\"%s\" alt=\"%s\" class=\"gallery-item row-span-%s col-span-%s\">" $rendered $url $alt $imgRows $imgCols }}
+{{ end }}
+
+<figure> 
+  <div class="gallery grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-flow-dense">
+    {{ $rendered | safeHTML -}}
+  </div>
+  {{ if $caption }}
+    <figcaption>{{ $caption | safeHTML }}</figcaption>
+  {{ end }}
+</figure>

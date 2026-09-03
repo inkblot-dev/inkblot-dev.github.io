@@ -15,11 +15,6 @@ Health and mana needed to be represented on screen during combat. Additionally, 
 
 ![Screenshot of a game's HUD.](images/interface/hud-ingame.png "The final HUD represented in-game -- captured from engine. Hearts disappear as you lose health, and stars as you expend mana. Additional hearts and stars can be added when leveling at an altar.")
 
-{{< gallery caption="Wireframe sketches of the HUD over live screenshots -- made in Affinity Designer and Procreate.">}}
-![HUD wire sketch on greenlight screenshot.](images/interface/hud-wiresketch-greenlight.jpg "HUD wire sketch over a live screenshot.") | flex-auto
-![First HUD wire sketch pass.](images/interface/hud-wiresketch-first.jpg "Initial wire sketch pass.") | flex-auto
-{{< /gallery >}}
-
 # Game States
 The biggest pain point in our UI was our utility screens, especially the loading, game over, and settings menus. They were very dense with information which the player was expected to remember.
 * To solve this, I wanted to strip as much text out of those screens as possible; if the game is inspired by bedtime stories, then we'd want to evoke the feeling of being a sleepy kid.

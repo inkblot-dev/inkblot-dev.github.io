@@ -1,0 +1,104 @@
+{{ $id := delimit (slice "gallery" (partial "functions/uid.html" .)) "-" -}}
+{{ $caption := .Get "caption" | default "" -}}
+{{ $class := .Get "class" | default "flex flex-col md:flex-row gap-px" -}} {{/* defaults to flex. */}}
+{{ $content := .Inner -}}
+{{ $rendered := "" -}}
+
+{{/*
+  Accepted per-line gallery item formats:
+  - Markdown image: ![alt](src "caption")
+  - Markdown image with classes: ![alt](src "caption") | class-a class-b
+  - Legacy HTML image: <img src="..." ...>
+*/}}
+{{ range split $content "\n" -}}
+  {{ $lineRaw := . -}}
+  {{ $line := strings.TrimSpace $lineRaw -}}
+  {{ if ne $line "" -}}
+    {{ $lineForOutput := $line -}}
+    {{ $parsed := false -}}
+
+    {{ $candidate := $line -}}
+    {{ $classList := "" -}}
+
+    {{ with findRESubmatch `^(.*?)\s*\|\s*(.+)$` $line -}}
+      {{ if hasPrefix $line "![" -}}
+        {{ $candidate = strings.TrimSpace (index (index . 0) 1) -}}
+        {{ $classRaw := strings.TrimSpace (index (index . 0) 2) -}}
+        {{ $classTokens := split $classRaw " " -}}
+        {{ $cleanTokens := slice -}}
+        {{ range $classTokens -}}
+          {{ $token := strings.TrimSpace . -}}
+          {{ if and (ne $token "") (gt (len (findRE `^[A-Za-z0-9:_/-]+$` $token)) 0) -}}
+            {{ $cleanTokens = $cleanTokens | append $token -}}
+          {{ end -}}
+        {{ end -}}
+        {{ $classList = delimit $cleanTokens " " -}}
+      {{ end -}}
+    {{ end -}}
+
+    {{ if hasPrefix $candidate "![" -}}
+      {{ with findRESubmatch `^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$` $candidate -}}
+        {{ $alt := index (index . 0) 1 -}}
+        {{ $srcValue := index (index . 0) 2 -}}
+        {{ $imgCaption := index (index . 0) 3 | default "" -}}
+        {{ $srcValueFinal := $srcValue -}}
+
+        {{ if or (hasPrefix $srcValue "http://") (hasPrefix $srcValue "https://") -}}
+          {{ with resources.GetRemote $srcValue -}}{{ $srcValueFinal = .RelPermalink -}}{{ end -}}
+        {{ else -}}
+          {{ with $.Page.Resources.GetMatch $srcValue -}}
+            {{ $srcValueFinal = .RelPermalink -}}
+          {{ else -}}
+            {{ with resources.GetMatch $srcValue -}}{{ $srcValueFinal = .RelPermalink -}}{{ end -}}
+          {{ end -}}
+        {{ end -}}
+
+        {{ $classAttr := "" | default -}}
+        {{ if ne $classList "" -}}
+          {{ $classAttr = printf ` class="%s"` ($classList | htmlEscape) -}}
+        {{ end -}}
+        {{ $captionAttr := "" -}}
+        {{ if ne $imgCaption "" -}}
+          {{ $captionAttr = printf ` title="%s"` ($imgCaption | htmlEscape) -}}
+        {{ end -}}
+
+        {{ $lineForOutput = printf `<img src="%s" alt="%s"%s%s>` $srcValueFinal ($alt | htmlEscape) $captionAttr $classAttr -}}
+        {{ $parsed = true -}}
+      {{ end -}}
+    {{ end -}}
+
+    {{ if and (not $parsed) (hasPrefix $line "<img") -}}
+      {{ with findRESubmatch `src=['"]([^'"]+)['"]` $line -}}
+        {{ $srcAttr := index (index . 0) 0 -}}
+        {{ $srcValue := index (index . 0) 1 -}}
+        {{ $srcValueFinal := $srcValue -}}
+
+        {{ if or (hasPrefix $srcValue "http://") (hasPrefix $srcValue "https://") -}}
+          {{ with resources.GetRemote $srcValue -}}{{ $srcValueFinal = .RelPermalink -}}{{ end -}}
+        {{ else -}}
+          {{ with $.Page.Resources.GetMatch $srcValue -}}
+            {{ $srcValueFinal = .RelPermalink -}}
+          {{ else -}}
+            {{ with resources.GetMatch $srcValue -}}{{ $srcValueFinal = .RelPermalink -}}{{ end -}}
+          {{ end -}}
+        {{ end -}}
+
+        {{ $lineForOutput = replace $line $srcAttr (printf `src="%s"` $srcValueFinal) -}}
+      {{ end -}}
+    {{ end -}}
+
+    {{ $rendered = printf "%s%s\n" $rendered $lineForOutput -}}
+  {{ end -}}
+{{ end -}}
+
+{{/* diff from theme: */}}
+{{/* swapping div -> figure. best structure for assistive tech. */}}
+{{/* added caption parameter, allowing for group captions. */}}
+
+{{ if not .Parent }}<div class="width-patch"></div>{{ end }}
+<figure id="{{- $id -}}" class="gallery {{ $class }}"> 
+  {{ $rendered | safeHTML -}}
+  {{ if $caption }}
+    <figcaption>{{ $caption | safeHTML }}</figcaption>
+  {{ end }}
+</figure>

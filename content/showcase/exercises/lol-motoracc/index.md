@@ -9,11 +9,13 @@ showReadingTime = false
 showWordCount = false
 showTableOfContents = false
 +++
-
 In this exercise, I pitch an accessibility rework for *League of Legends*, namely their attack-move command. LoL is one of my favorite games, but I know from experience that the game lacks sorely in accessibility options. My proposal revolves around creating a priority targetting system, allowing attack-move to interact with both champion stats and the environment.
 
 > [!alert]
-> Revisiting this project a few years later, I don't agree with every decision I made on this exercise. I'll cover a few corrections at the end of the blog.
+> This exercise is unofficial; it was not done on behalf of Riot Games and is not affiliated with Riot Games. *League of Legends* is the intellectual property of Riot Games.
+
+> [!alert]
+> Revisiting years later, I don't agree with every decision I made on this exercise. I'll cover a few corrections at the end of the blog.
 
 ### Context
 In *League*'s default control mode, player movement and auto-attacks are controlled by mouse input. RMB on the ground will order your champion to path to that location. RMB on a unit will order your champion to attack it, moving into range if necessary and repeating until the order is cancelled. Beyond the beginner level, the player is expected to weave these controls together in rapid succession. 
@@ -47,9 +49,9 @@ My favorite part of this solution is that it’s elegant. By changing the way th
 
 On top of that, we have full control of how “opt-in” this mechanic is. In my pitch, I propose a slider to control the precision of the system; beyond that, we can also add a toggle in the settings for switching to the legacy system altogether.
 
-### Retrospective
+## Retrospective
 > [!alert]
-> This section is written from the future -- 2026 to be exact.
+> This section was written later: 2026.
 
 My evaluation of this proposal, with my current sensibilities as a designer: I had the right idea, but my understanding of the attack-move mechanic was a little shallow.
 

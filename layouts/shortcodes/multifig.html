@@ -8,8 +8,9 @@
 {{ $rendered := "" }}
 {{ range split (trim $inner "\n") "\n" }}
   {{ $line := . }}
+
   {{/* PROCESS EACH LINE */}}
-  
+  {{/* extract alt text and url from markdown image syntax */}}
   {{ $alt := "" }}
   {{ $altRegexMatch := findRE `!\[([^\]]*)\]` $line }}
   {{ if $altRegexMatch }}
@@ -28,34 +29,25 @@
     {{ continue }}
   {{ end }}
 
-  {{ $imgCols := 1 }}
-  {{ $imgRows := 1 }}
   {{/* if the url works, pull the image from it. figure out its aspect ratio.*/}}
-  {{if $url }}
-    {{ $img := $page.Resources.GetMatch $url }}
-
-    {{ $imgW := $img.Width }}
-    {{ $imgH := $img.Height }}
-    {{ $imgRatio := div $imgH $imgW }}
-
-    {{/* is this image horizontal or vertical? test by comparing $imgRatio to 1 */}}
-    {{ if lt $imgRatio 1 }}
-      {{/* horizontal image */}}
-      {{ $imgCols = 1 }}
-      {{ $imgRows = 2 }}
-    {{ else if gt $imgRatio 1 }}
-      {{/* vertical image */}}
-      {{ $imgCols = 2 }}
-      {{ $imgRows = 1 }}
-    {{ end }}
+  {{ $img := $page.Resources.GetMatch $url }} 
+  {{ $imgRatio := div $img.Height $img.Width }}
+  {{ $imgFlexSize := 2 }}  
+  {{/* is this image horizontal or vertical? test by comparing $imgRatio to 1 */}}
+  {{ if lt $imgRatio .75 }}
+    {{/* horizontal image */}}
+    {{ $imgFlexSize = 3 }}
+  {{ else if gt $imgRatio 1.33 }}
+    {{/* vertical image */}}
+    {{ $imgFlexSize = 1 }}
   {{ end }}
 
   {{/* Output each line. */}}
-  {{ $rendered = printf "%s<img src=\"%s\" alt=\"%s\" class=\"gallery-item row-span-%s col-span-%s\">" $rendered $url $alt $imgRows $imgCols }}
+  {{ $rendered = printf "%s<img src=\"%s\" alt=\"%s\" class=\"gallery-item flex-%s max-w-[50vw] lg:max-w-[33vw]\">" $rendered $url $alt $imgFlexSize }}
 {{ end }}
 
 <figure> 
-  <div class="gallery grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-flow-dense">
+  <div class="multifig flex flex-wrap flex-col lg:flex-row">
     {{ $rendered | safeHTML -}}
   </div>
   {{ if $caption }}

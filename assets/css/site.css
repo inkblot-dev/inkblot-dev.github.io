@@ -1,0 +1,5 @@
+@config "../../themes/blowfish/tailwind.config.js";
+@source "../../content";
+@source "../../layouts";
+@source "../../themes/blowfish/layouts";
+@import "../../themes/blowfish/assets/css/main.css";

@@ -33,4 +33,10 @@
       color: var(--tw-prose-captions-dark) !important;
     }
   }
+
+  /* no spacing utility */
+  .prose :where(.no-spacing):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    margin-top: 4px !important;
+    margin-bottom : 4px !important;
+  }
 }

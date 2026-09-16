@@ -91,3 +91,6 @@ enableEmoji = true
   [caches.modules]
     dir = ':cacheDir/modules'
     maxAge = -1
+
+[security]
+  allowContent = ['! ^text/org$']

@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "server": "hugo server -b http://localhost -p 1313",
-    "tw:dev": "cross-env NODE_ENV=development ./themes/blowfish/node_modules/@tailwindcss/cli/dist/index.mjs -c ./themes/blowfish/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
-    "tw:build": "cross-env NODE_ENV=production ./themes/blowfish/node_modules/@tailwindcss/cli/dist/index.mjs -c ./themes/blowfish/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit"
+    "tw:dev": "cross-env NODE_ENV=development ./themes/blowfish/node_modules/@tailwindcss/cli/dist/index.mjs -c ./themes/blowfish/tailwind.config.js -i ./assets/css/site.css -o ./assets/css/compiled/main.css --jit -w",
+    "tw:build": "cross-env NODE_ENV=production ./themes/blowfish/node_modules/@tailwindcss/cli/dist/index.mjs -c ./themes/blowfish/tailwind.config.js -i ./assets/css/site.css -o ./assets/css/compiled/main.css --jit"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",

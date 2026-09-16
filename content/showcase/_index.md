@@ -5,7 +5,7 @@ layout = "multi-list"
 
 [[sections]]
 title = "Projects"
-description = "My contributions on real projects."
+description = "My contributions on long-term projects."
 category = "project"
 
 [[sections]]

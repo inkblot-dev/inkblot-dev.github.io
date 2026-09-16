@@ -1,11 +1,19 @@
 /* Custom site utilities */
-
 @layer components {
-  .prose em {
-    color: rgb(var(--color-primary-700));
-  }
-  .dark .prose em {
-    color: rgb(var(--color-primary-300));
+  .prose {
+    :where(em):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: rgb(var(--color-primary-700));
+      .dark & {
+        color: rgb(var(--color-primary-300));
+      }
+    }
+
+    :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+      color: rgb(var(--color-secondary-700));
+      .dark & {
+        color: rgb(var(--color-secondary-300));
+      }
+    }
   }
 }
 

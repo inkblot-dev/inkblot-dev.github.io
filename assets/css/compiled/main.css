@@ -48,6 +48,7 @@
     --font-weight-black: 900;
     --tracking-tighter: -0.05em;
     --tracking-tight: -0.025em;
+    --leading-tight: 1.25;
     --leading-snug: 1.375;
     --leading-relaxed: 1.625;
     --radius-sm: 0.25rem;
@@ -2877,6 +2878,10 @@
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
   }
+  .leading-tight {
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+  }
   .font-black {
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
@@ -5241,6 +5246,7 @@ body:has(#mobile-menu-toggle:checked):not(:has(#mobile-menu-dialog.mobile-menu-s
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
 }
+@layer utilities;
 @layer base {
   input:where([type='text']),input:where(:not([type])),input:where([type='email']),input:where([type='url']),input:where([type='password']),input:where([type='number']),input:where([type='date']),input:where([type='datetime-local']),input:where([type='month']),input:where([type='search']),input:where([type='tel']),input:where([type='time']),input:where([type='week']),select:where([multiple]),textarea,select {
     appearance: none;

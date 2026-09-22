@@ -1,4 +1,9 @@
-/* Custom site utilities */
+/* Custom css that WONT PASS THROUGH TAILWIND'S jit compiler.
+If you are applying something using native CSS, put it here.
+This file will be imported by blowfish, so don't include it in the tailwind build.
+You can be more heavy-handed in this file as a result. - sylvie :) */
+
+
 @layer components {
   .prose {
     :where(em):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
@@ -32,11 +37,5 @@
     .dark & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
       color: var(--tw-prose-captions-dark) !important;
     }
-  }
-
-  /* no spacing utility */
-  .prose :where(.no-spacing):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    margin-top: 4px !important;
-    margin-bottom : 4px !important;
   }
 }

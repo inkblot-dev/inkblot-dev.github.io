@@ -1,0 +1,7 @@
+/* Custom CSS that PASSES THROUGH TAILWIND'S jit compiler.
+If you are applying something using tailwind directives or functions, it needs to go here.
+I recommend keeping it lightweight. - sylvie :) */
+
+@layer utilities {
+    
+}

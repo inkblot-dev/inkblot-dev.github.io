@@ -70,6 +70,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --tw-prose-bold: rgba(var(--color-secondary-700),1);
+    --border-width: 2px;
   }
 }
 @layer base {
@@ -390,6 +392,9 @@
   }
   .m-0 {
     margin: 0px;
+  }
+  .m-0\! {
+    margin: 0px !important;
   }
   .m-1 {
     margin: var(--spacing);
@@ -1932,6 +1937,9 @@
   .h-\[1000px\] {
     height: 1000px;
   }
+  .h-fit {
+    height: fit-content;
+  }
   .h-full {
     height: 100%;
   }
@@ -2293,6 +2301,10 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-\(length\:--border-width\) {
+    border-style: var(--tw-border-style);
+    border-width: var(--border-width);
   }
   .border-0 {
     border-style: var(--tw-border-style);
@@ -2945,6 +2957,9 @@
   }
   .\!text-neutral {
     color: rgba(var(--color-neutral), 1) !important;
+  }
+  .text-\(--tw-prose-body\) {
+    color: var(--tw-prose-body);
   }
   .text-inherit {
     color: inherit;
@@ -3600,6 +3615,9 @@
     }
     .lg\:flex-row {
       flex-direction: row;
+    }
+    .lg\:gap-8 {
+      gap: calc(var(--spacing) * 8);
     }
     .lg\:gap-16 {
       gap: calc(var(--spacing) * 16);

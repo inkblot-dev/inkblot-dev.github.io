@@ -2,6 +2,12 @@
 If you are applying something using tailwind directives or functions, it needs to go here.
 I recommend keeping it lightweight. - sylvie :) */
 
-@layer utilities {
+@theme {
+    --tw-prose-bold: rgba(var(--color-secondary-700),1)   ;
     
+    --border-width: 2px;
+}
+
+@layer utilities {
+
 }

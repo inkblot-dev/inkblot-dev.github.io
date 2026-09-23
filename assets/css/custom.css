@@ -10,17 +10,16 @@ You can be more heavy-handed in this file as a result. - sylvie :) */
       color: rgb(var(--color-primary-300));
     }
   }
-  .prose:where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    color: rgb(var(--color-secondary-700));
-    .dark & {
-      color: rgb(var(--color-secondary-300));
-    }
-  }
 }
 
 @layer utilities {
   /* variables */
   .prose {
+    --tw-prose-bold: rgba(var(--color-secondary-700), 1);
+    --tw-prose-invert-bold: rgba(var(--color-secondary-300), 1);
+    --tw-prose-em: rgba(var(--color-primary-700), 1);
+    --tw-prose-invert-em: rgba(var(--color-primary-300), 1);
+
     --tw-prose-captions: rgba(var(--color-neutral-600), 1);
     --tw-prose-invert-captions: rgba(var(--color-neutral-400), 1);
   }

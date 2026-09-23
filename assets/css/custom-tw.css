@@ -9,5 +9,8 @@ I recommend keeping it lightweight. - sylvie :) */
 }
 
 @layer utilities {
-
+    .prose a {
+        @apply after:content-['_↗'];
+        @apply after:text-(--tw-prose-links);
+    }
 }

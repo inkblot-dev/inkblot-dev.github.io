@@ -9,7 +9,7 @@ I recommend keeping it lightweight. - sylvie :) */
 }
 
 @layer utilities {
-    .prose a {
+    .prose a.with-arrow {
         @apply after:content-['_↗'];
         @apply after:text-(--tw-prose-links);
     }

@@ -5265,7 +5265,7 @@ body:has(#mobile-menu-toggle:checked):not(:has(#mobile-menu-dialog.mobile-menu-s
   text-underline-offset: 4px;
 }
 @layer utilities {
-  .prose a::after {
+  .prose a.with-arrow::after {
     --tw-content: ' ↗';
     content: var(--tw-content);
     color: var(--tw-prose-links);

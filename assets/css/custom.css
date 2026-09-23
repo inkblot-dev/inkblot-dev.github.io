@@ -3,21 +3,17 @@ If you are applying something using native CSS, put it here.
 This file will be imported by blowfish, so don't include it in the tailwind build.
 You can be more heavy-handed in this file as a result. - sylvie :) */
 
-
 @layer components {
-  .prose {
-    :where(em):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-      color: rgb(var(--color-primary-700));
-      .dark & {
-        color: rgb(var(--color-primary-300));
-      }
+  .prose:where(em):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: rgb(var(--color-primary-700));
+    .dark & {
+      color: rgb(var(--color-primary-300));
     }
-
-    :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-      color: rgb(var(--color-secondary-700));
-      .dark & {
-        color: rgb(var(--color-secondary-300));
-      }
+  }
+  .prose:where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: rgb(var(--color-secondary-700));
+    .dark & {
+      color: rgb(var(--color-secondary-300));
     }
   }
 }
@@ -25,17 +21,7 @@ You can be more heavy-handed in this file as a result. - sylvie :) */
 @layer utilities {
   /* variables */
   .prose {
-    --tw-prose-captions-light: rgba(var(--color-neutral-600), 1);
-    --tw-prose-captions-dark: rgba(var(--color-neutral-400), 1);
-  }
-
-  /* captions */
-  .prose {
-    & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-      color: var(--tw-prose-captions-light) !important;
-    }
-    .dark & :where(figcaption):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-      color: var(--tw-prose-captions-dark) !important;
-    }
+    --tw-prose-captions: rgba(var(--color-neutral-600), 1);
+    --tw-prose-invert-captions: rgba(var(--color-neutral-400), 1);
   }
 }

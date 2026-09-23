@@ -3,8 +3,6 @@ If you are applying something using tailwind directives or functions, it needs t
 I recommend keeping it lightweight. - sylvie :) */
 
 @theme {
-    --tw-prose-bold: rgba(var(--color-secondary-700),1)   ;
-    
     --border-width: 2px;
 }
 
@@ -12,5 +10,12 @@ I recommend keeping it lightweight. - sylvie :) */
     .prose a.with-arrow {
         @apply after:content-['_↗'];
         @apply after:text-(--tw-prose-links);
+    }
+
+    .prose em {
+        @apply text-(--tw-prose-em)!;
+        .dark & {
+          @apply text-(--tw-prose-invert-em)!;
+        }
     }
 }
